@@ -4,6 +4,7 @@
         <title></title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
         <style type="text/css">
         /*  Reset CSS
         http://meyerweb.com/eric/tools/css/reset/
@@ -120,8 +121,8 @@
         height: 100%;
         }
         .visualization{
-        float:right;
-        width: 69%;
+        /*float:right;*/
+        width: 100%;
         background-color: #f5f2eb;
         border: 1px solid #aaa;
         }
@@ -184,94 +185,87 @@
             <main class="mdl-layout__content">
             <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
                 <div class="page-content">
-                    <section class="upper-half">
-                        <div class="filter">
-                            <ul class="demo-list-icon mdl-list social-media-filter">
-                                <li class="mdl-list__item">
-                                    <span class="mdl-list__item-primary-content social-media-button facebook selected">
-                                        <i class="material-icons mdl-list__item-icon ">person</i>
-                                        Facebook
-                                    </span>
-                                </li>
-                                <li class="mdl-list__item">
-                                    <span class="mdl-list__item-primary-content social-media-button twitter">
-                                        <i class="material-icons mdl-list__item-icon">person</i>
-                                        Twitter
-                                    </span>
-                                </li>
-                                <li class="mdl-list__item">
-                                    <span class="mdl-list__item-primary-content social-media-button instagram">
-                                        <i class="material-icons mdl-list__item-icon">person</i>
-                                        Instagram
-                                    </span>
-                                </li>
-                                <li class="mdl-list__item">
-                                    <span class="mdl-list__item-primary-content social-media-button line">
-                                        <i class="material-icons mdl-list__item-icon ">person</i>
-                                        LINE
-                                    </span>
-                                </li>                                
-                            </ul>
-                            <ul class="demo-list-icon mdl-list social-media-filter batch-filter">
-                                <li class="mdl-list__item">
-                                    <span class="mdl-list__item-primary-content batch-button 2012 selected">
-                                        <i class="material-icons mdl-list__item-icon ">person</i>
-                                        2012
-                                    </span>
-                                </li>
-                                <li class="mdl-list__item">
-                                    <span class="mdl-list__item-primary-content batch-button 2013">
-                                        <i class="material-icons mdl-list__item-icon">person</i>
-                                        2013
-                                    </span>
-                                </li>
-                                <li class="mdl-list__item">
-                                    <span class="mdl-list__item-primary-content batch-button 2014">
-                                        <i class="material-icons mdl-list__item-icon">person</i>
-                                        2014
-                                    </span>
-                                </li>
-                                <li class="mdl-list__item">
-                                    <span class="mdl-list__item-primary-content batch-button 2015">
-                                        <i class="material-icons mdl-list__item-icon ">person</i>
-                                        2015
-                                    </span>
-                                </li>                                
-                            </ul>
+                    <div class="row">
+                        <div class="col s3">
+                              <div class="collection social-media-filter">
+                                <a class="collection-item active social-media-button facebook">Facebook</a>
+                                <a class="collection-item social-media-button twitter">Twitter</a>
+                                <a class="collection-item social-media-button instagram">Instagram</a>
+                                <a class="collection-item social-media-button line">LINE</a>
+                              </div>
+
+                              <div class="collection social-media-filter">
+                                <a class="collection-item active batch-button 2012">2012</a>
+                                <a class="collection-item batch-button 2013">2013</a>
+                                <a class="collection-item batch-button 2014">2014</a>
+                                <a class="collection-item batch-button 2015">2015</a>
+                              </div>
                         </div>
-                        <div class="visualization">
-                            <h1>THIS IS SPARTA</h1>
+                        <div class="col s9">
+                            <div class="visualization">
+                                <h1>THIS IS SPARTA</h1>
+                            </div>
                         </div>
-                        
-                        
-                    </section>
-                    <section class="bottom-half">
-                        <div class="insight facebook">
-                            Facebook Insight
-                        </div>
-                        <div class="insight twitter">
-                            Twitter Insight
-                        </div>
-                        <div class="insight line">
-                            Line Insight
-                        </div>
-                        <div class="insight instagram">
-                            Instagram Insight
-                        </div>
-                    </section>
+                    </div>
                 </div>
             </section>
             <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-                <div class="page-content"><!-- Your content goes here --></div>
+                <div class="page-content">
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat expedita perferendis delectus! Nulla reiciendis illo iure in odit ducimus vitae assumenda architecto suscipit voluptatibus obcaecati sint beatae, accusantium est fugit.</div>
+                    <div>Officia expedita ex fuga aut eligendi quibusdam dolores, illum voluptatibus, officiis beatae eum magni quidem iste magnam! Inventore, enim, odio. Assumenda illum accusantium minima amet repellendus obcaecati totam deserunt commodi.</div>
+                    <div>Possimus, voluptatibus, provident pariatur officia obcaecati tenetur voluptas quidem laboriosam quia nulla debitis nesciunt porro ullam! Quaerat obcaecati, illum repellat accusantium, non sit! Incidunt, aspernatur, atque. Non expedita dolorum consectetur.</div>
+                    <div>Provident cum delectus consequatur totam, ex, sint debitis in corrupti consectetur iure ut rem itaque, culpa aliquid neque perspiciatis accusantium? Eos debitis similique repellat iure vero doloribus voluptate facere omnis.</div>
+                    <div>Laborum eum consequatur illum asperiores rem voluptas saepe dicta earum veniam ipsam autem, sed modi sunt amet, vitae doloremque culpa consequuntur accusamus. Delectus perferendis atque veritatis maxime unde, dignissimos nemo!</div>
+                </div>
             </section>
             <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-                <div class="page-content"><!-- Your content goes here --></div>
+                <div class="page-content">
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quibusdam quae consequatur repellendus quam voluptatibus laborum, animi a non accusamus amet nesciunt explicabo possimus harum eos mollitia quas veniam. Labore.</div>
+                    <div>Rem facilis accusantium et doloremque repellat, deleniti, adipisci tempora minus esse modi ducimus ipsa ipsam voluptatum repellendus repudiandae ullam excepturi minima, iure similique eaque itaque quos iste suscipit. Quas, magnam.</div>
+                    <div>A est voluptate tenetur hic, voluptas accusantium perspiciatis ipsam corrupti perferendis beatae ipsum reprehenderit magnam quod, quos laudantium nesciunt mollitia doloribus ratione illo neque sit recusandae tempore voluptatem quia earum?</div>
+                    <div>Labore porro amet, nihil et quasi quo, obcaecati sint nesciunt velit voluptates laudantium. Suscipit deleniti perspiciatis vel qui esse ea quo quod iure? Sequi atque eos, aliquid corporis aut. Suscipit.</div>
+                    <div>Ipsa, accusamus quaerat quas a culpa perferendis dolor praesentium maiores, expedita ut sint ipsum, libero recusandae autem nostrum est quae. Praesentium excepturi in, odit nesciunt consequatur vitae quis id quia.</div>
+                </div>
             </section>
             </main>
+            <div class="mdl-js-layout mdl-layout--fixed-header
+                mdl-layout--fixed-tabs">
+                <header class="mdl-layout__header">
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                        <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Facebook</a>
+                        <a href="#fixed-tab-2" class="mdl-layout__tab">Twitter</a>
+                        <a href="#fixed-tab-3" class="mdl-layout__tab">Instagram</a>
+                        <a href="#fixed-tab-4" class="mdl-layout__tab">LINE</a>
+                    </div>
+                </header>
+                <main class="mdl-layout__content">
+                <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                    <div class="page-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eum id inventore unde omnis provident ipsam distinctio ullam molestiae commodi, itaque quisquam odit. Repellat labore saepe, fugit dignissimos odio ducimus!
+                    </div>
+                </section>
+                <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                    <div class="page-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita debitis consectetur deleniti delectus numquam, nam quis aut non ullam repudiandae, neque incidunt, voluptates iste, obcaecati dignissimos magnam iusto. Ut, ipsum.
+                    </div>
+                </section>
+                <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+                    <div class="page-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius hic, minus, ut blanditiis odit error ipsam eos officia fuga consectetur iusto ipsa debitis mollitia, sed quam accusantium officiis est corporis.
+                    </div>
+                </section>
+                <section class="mdl-layout__tab-panel" id="fixed-tab-4">
+                    <div class="page-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptatibus alias illo repellendus officia commodi ratione quis, unde amet odio cum nobis nesciunt autem facere, vero tempore? Veniam reprehenderit, qui!
+                    </div>
+                </section>
+                </main>
+            </div>
         </div>
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="viz.js"></script>
         <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
     </body>
