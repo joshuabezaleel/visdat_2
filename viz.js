@@ -297,6 +297,7 @@ function showChart(params){
 }
 
 $(".social-media-button").click(function(){
+    console.log("Jancuk");
     if ($(this).hasClass('selected')){
         if (!checkOnlySocialMedia(whatSocialMedia($(this)))){
             $(this).removeClass('selected');
