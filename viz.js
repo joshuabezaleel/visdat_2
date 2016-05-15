@@ -8,7 +8,8 @@ socialMedia = {
 batch = {
     "2012" : true,
     "2013" : false,
-    "2014" : false
+    "2014" : false,
+    "2015" : false,
 }
 //console.log($(".social-media-button"));
 
