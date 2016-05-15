@@ -297,41 +297,42 @@ function showChart(params){
 }
 
 $(".social-media-button").click(function(){
-    if ($(this).hasClass('selected')){
+    console.log("Jancuk");
+    if ($(this).hasClass('active')){
         if (!checkOnlySocialMedia(whatSocialMedia($(this)))){
-            $(this).removeClass('selected');
+            $(this).removeClass('active');
             var thisSocialMedia = whatSocialMedia($(this));
             alterSocialMedia(thisSocialMedia);
             deleteChart(thisSocialMedia);
             showAChart(thisSocialMedia);
         }               
     } else {
-        $(this).addClass('selected');
+        $(this).addClass('active');
         var thisSocialMedia = whatSocialMedia($(this));
         alterSocialMedia(thisSocialMedia);
-		deleteChart(whatSocialMedia( $(this).siblings('.selected')));
-        $(this).siblings('.selected').removeClass('selected');
+		deleteChart(whatSocialMedia( $(this).siblings('.active')));
+        $(this).siblings('.active').removeClass('active');
         deleteChart(thisSocialMedia);
         showAChart(thisSocialMedia);
     }
 });
 
 $(".batch-button").click(function(){
-    if ($(this).hasClass('selected')){
+    if ($(this).hasClass('active')){
         var thisBatch = checkBatch($(this));
         if (!checkOnlyBatch(thisBatch)){
-            $(this).removeClass('selected');
+            $(this).removeClass('active');
             batch[thisBatch] = false;
-            activeSocialMedia = whatSocialMedia($(".social-media-button.selected"));
+            activeSocialMedia = whatSocialMedia($(".social-media-button.active"));
             deleteChart(activeSocialMedia);
             showAChart(activeSocialMedia);
         }
         debugBatch();
     } else {
-        $(this).addClass('selected');
+        $(this).addClass('active');
         var thisBatch = checkBatch($(this));
         batch[thisBatch] = true;
-        activeSocialMedia = whatSocialMedia($(".social-media-button.selected"));
+        activeSocialMedia = whatSocialMedia($(".social-media-button.active"));
         deleteChart(activeSocialMedia);
         showAChart(activeSocialMedia);
     }
@@ -464,3 +465,7 @@ function deleteChart(name){
         $(".instagram-chart").empty();
     }
 }
+$(".facebook-tab").click(function () {
+    $(".facebook-tab").css("background-color","#3b5998");
+    $(".facebook-panel").css("background-color","#3b5998");
+})
