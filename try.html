@@ -11,7 +11,6 @@
         v2.0 | 20110126
         License: none (public domain)
         */
-
         html, body, div, span, applet, object, iframe,
         h1, h2, h3, h4, h5, h6, p, blockquote, pre,
         a, abbr, acronym, address, big, cite, code,
@@ -165,39 +164,31 @@
         top: 100%;
         left: 0;
         }
-
         a.facebook.active.social-media-button {
-            background-color: #3b5998
-        } 
-
+        background-color: #3b5998
+        }
         a.twitter.active.social-media-button {
-            background-color: #4099FF
-        } 
-
+        background-color: #4099FF
+        }
         a.instagram.active.social-media-button {
-            background-color: #9b6954
-        } 
-
+        background-color: #9b6954
+        }
         a.line.active.social-media-button {
-            background-color: #0AC50A
-        } 
-
+        background-color: #0AC50A
+        }
         .collection-item.social-media-button {
-            padding:20px 20px;
+        padding:20px 20px;
         }
-
         .collection-item.batch-button {
-            padding:20px 20px;
+        padding:20px 20px;
         }
-
         .col.s9.vizchart {
-            padding: 30px 0.75rem;
-        } 
-
+        padding: 30px 0.75rem;
+        }
         .col.s3.sideboard {
-            padding: 15px 0.75rem;
-        } 
-
+        font-size: large;
+        padding: 15px 0.75rem;
+        }
         </style>
     </head>
     <body>
@@ -205,15 +196,25 @@
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs">
             <header class="mdl-layout__header">
-                <div class="mdl-layout__header-row">
-                    <!-- Title -->
-                    <span class="mdl-layout-title">ITB Slackest Time</span>
+                <div class="col s9">
+                    <div class="mdl-layout__header-row">
+                        <!-- Title -->
+                        <span class="mdl-layout-title">ITB Slackest Time</span>
+                        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon" style="float: right;">
+                        <i class="material-icons">more_vert</i>
+                        </button>
+                        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                            for="demo-menu-lower-right">
+                            <li class="mdl-menu__item">About</li>
+                        </ul>
+                    </div>
                 </div>
+                <!-- Right aligned menu below button -->
                 <!-- Tabs -->
                 <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                    <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
-                    <a href="#fixed-tab-2" class="mdl-layout__tab">Tab 2</a>
-                    <a href="#fixed-tab-3" class="mdl-layout__tab">Tab 3</a>
+                    <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Visualization</a>
+                    <a href="#fixed-tab-2" class="mdl-layout__tab">Description</a>
+                    <a href="#fixed-tab-3" class="mdl-layout__tab">About</a>
                 </div>
             </header>
             <main class="mdl-layout__content">
@@ -221,18 +222,17 @@
                 <div class="page-content">
                     <div class="row">
                         <div class="col s3 sideboard">
-                              <div class="collection social-media-filter">
+                            <div class="collection social-media-filter">
                                 <a class="collection-item active social-media-button facebook">Facebook</a>
                                 <a class="collection-item social-media-button twitter">Twitter</a>
                                 <a class="collection-item social-media-button instagram">Instagram</a>
                                 <a class="collection-item social-media-button line">LINE</a>
-                              </div>
-
-                              <div class="collection social-media-filter">
+                            </div>
+                            <div class="collection social-media-filter">
                                 <a class="collection-item active batch-button 2012">2012</a>
                                 <a class="collection-item batch-button 2013">2013</a>
                                 <a class="collection-item batch-button 2014">2014</a>
-                              </div>
+                            </div>
                         </div>
                         <div class="col s9 vizchart">
                             <div class="visualization">
@@ -253,46 +253,81 @@
             </section>
             <section class="mdl-layout__tab-panel" id="fixed-tab-3">
                 <div class="page-content">
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quibusdam quae consequatur repellendus quam voluptatibus laborum, animi a non accusamus amet nesciunt explicabo possimus harum eos mollitia quas veniam. Labore.</div>
-                    <div>Rem facilis accusantium et doloremque repellat, deleniti, adipisci tempora minus esse modi ducimus ipsa ipsam voluptatum repellendus repudiandae ullam excepturi minima, iure similique eaque itaque quos iste suscipit. Quas, magnam.</div>
-                    <div>A est voluptate tenetur hic, voluptas accusantium perspiciatis ipsam corrupti perferendis beatae ipsum reprehenderit magnam quod, quos laudantium nesciunt mollitia doloribus ratione illo neque sit recusandae tempore voluptatem quia earum?</div>
-                    <div>Labore porro amet, nihil et quasi quo, obcaecati sint nesciunt velit voluptates laudantium. Suscipit deleniti perspiciatis vel qui esse ea quo quod iure? Sequi atque eos, aliquid corporis aut. Suscipit.</div>
-                    <div>Ipsa, accusamus quaerat quas a culpa perferendis dolor praesentium maiores, expedita ut sint ipsum, libero recusandae autem nostrum est quae. Praesentium excepturi in, odit nesciunt consequatur vitae quis id quia.</div>
+                    <div class="row">
+                        <div class="col s3 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/12552841_1160179730676636_1270496633695306890_n.jpg?oh=bf0d03f5c8486eade154ab6c004253cd&oe=57E84F3D">
+                                    <span class="card-title">Muntaha Ilmi</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">See my awesome profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s3 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/12552841_1160179730676636_1270496633695306890_n.jpg?oh=bf0d03f5c8486eade154ab6c004253cd&oe=57E84F3D">
+                                    <span class="card-title">Muntaha Ilmi</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">See my awesome profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s3 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/12552841_1160179730676636_1270496633695306890_n.jpg?oh=bf0d03f5c8486eade154ab6c004253cd&oe=57E84F3D">
+                                    <span class="card-title">Muntaha Ilmi</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">See my awesome profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s3 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="https://scontent-sit4-1.xx.fbcdn.net/v/t1.0-9/12552841_1160179730676636_1270496633695306890_n.jpg?oh=bf0d03f5c8486eade154ab6c004253cd&oe=57E84F3D">
+                                    <span class="card-title">Muntaha Ilmi</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>I am a very simple card. I am good at containing small bits of information.
+                                    I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="#">See my awesome profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             </main>
-            <div class="mdl-js-layout mdl-layout--fixed-header
-                mdl-layout--fixed-tabs">
-                <header class="mdl-layout__header">
-                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                        <a href="#fixed-tab-1" class="mdl-layout__tab is-active facebook-tab">Facebook</a>
-                        <a href="#fixed-tab-2" class="mdl-layout__tab twitter-tab">Twitter</a>
-                        <a href="#fixed-tab-3" class="mdl-layout__tab instagram-tab">Instagram</a>
-                        <a href="#fixed-tab-4" class="mdl-layout__tab line-tab">LINE</a>
-                    </div>
-                </header>
-                <main class="mdl-layout__content">
-                <section class="mdl-layout__tab-panel is-active facebook-panel" id="fixed-tab-1">
-                    <div class="page-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eum id inventore unde omnis provident ipsam distinctio ullam molestiae commodi, itaque quisquam odit. Repellat labore saepe, fugit dignissimos odio ducimus!
-                    </div>
-                </section>
-                <section class="mdl-layout__tab-panel twitter-panel" id="fixed-tab-2">
-                    <div class="page-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita debitis consectetur deleniti delectus numquam, nam quis aut non ullam repudiandae, neque incidunt, voluptates iste, obcaecati dignissimos magnam iusto. Ut, ipsum.
-                    </div>
-                </section>
-                <section class="mdl-layout__tab-panel instagram-panel" id="fixed-tab-3">
-                    <div class="page-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius hic, minus, ut blanditiis odit error ipsam eos officia fuga consectetur iusto ipsa debitis mollitia, sed quam accusantium officiis est corporis.
-                    </div>
-                </section>
-                <section class="mdl-layout__tab-panel line-panel" id="fixed-tab-4">
-                    <div class="page-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur voluptatibus alias illo repellendus officia commodi ratione quis, unde amet odio cum nobis nesciunt autem facere, vero tempore? Veniam reprehenderit, qui!
-                    </div>
-                </section>
-                </main>
+            <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red">
+                    <i class="large material-icons">mode_edit</i>
+                </a>
+                <ul>
+                    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                </ul>
             </div>
         </div>
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
