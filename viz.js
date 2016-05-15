@@ -8,8 +8,7 @@ socialMedia = {
 batch = {
     "2012" : true,
     "2013" : false,
-    "2014" : false,
-    "2015" : false,
+    "2014" : false
 }
 //console.log($(".social-media-button"));
 
@@ -466,3 +465,7 @@ function deleteChart(name){
         $(".instagram-chart").empty();
     }
 }
+$(".facebook-tab").click(function () {
+    $(".facebook-tab").css("background-color","#3b5998");
+    $(".facebook-panel").css("background-color","#3b5998");
+})
