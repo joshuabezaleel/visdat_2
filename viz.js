@@ -33,7 +33,7 @@ function convertToTime(time){
 /* LOAD DATA FROM CSV */
 var numReady=0;
 var dataFacebook = [];
-d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/facebook.csv", function(d) {
+d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/gh-pages/facebook.csv", function(d) {
   return {
     value: +d.Percentage,
     time: convertToTime(+d.Time),
@@ -46,7 +46,7 @@ d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/faceboo
 });
 
 var dataTwitter=[];
-d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/twitter.csv", function(d) {
+d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/gh-pages/twitter.csv", function(d) {
   return {
     value: +d.Percentage,
     time: convertToTime(+d.Time),
@@ -59,7 +59,7 @@ d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/twitter
 });
 
 var dataLine = [];
-d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/line.csv", function(d) {
+d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/gh-pages/line.csv", function(d) {
   return {
     value: +d.Percentage,
     time: convertToTime(+d.Time),
@@ -72,7 +72,7 @@ d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/line.cs
 });
 
 var dataInstagram = [];
-d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/instagram.csv", function(d) {
+d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/gh-pages/instagram.csv", function(d) {
   return {
     value: +d.Percentage,
     time: convertToTime(+d.Time),
