@@ -67,7 +67,7 @@
         text-align: center;
         }
         #chart{
-       /* background-color: #F5F2EB;
+        /* background-color: #F5F2EB;
         border: 1px solid #CCC;*/
         }
         .bar{
@@ -185,17 +185,17 @@
         padding:20px 20px;
         }
         .collection a.collection-item.batch-button {
-        color: rgb(63,81,181);            
+        color: rgb(63,81,181);
         }
         .collection a.collection-item.batch-button.active {
         background-color: rgb(63,81,181);
-        color: #FFFFFF;            
+        color: #FFFFFF;
         }
         .collection a.collection-item.social-media-button {
-        color: rgb(63,81,181);            
+        color: rgb(63,81,181);
         }
         .collection a.collection-item.social-media-button.active {
-        color: #FFFFFF;            
+        color: #FFFFFF;
         }
         .col.s9.vizchart {
         padding: 30px 0.75rem;
@@ -205,8 +205,39 @@
         padding: 15px 0.75rem;
         }
         </style>
+        <link rel="stylesheet" href="assets/css/main.css" />
     </head>
     <body>
+        <section id="header" style="padding: 1em 0 1em 0">
+            <div class="inner">
+                <span class="icon major fa-cloud"></span>
+                <h1><strong>ITB Slackest Time</strong></h1>
+            </div>
+        </section>
+        <!-- One -->
+        <section id="one" class="main style1">
+            <div class="container">
+                <div class="row 150%">
+                    <div class="6u 12u$(medium)">
+                        <header class="major">
+                            <h2>Most Popular Social Media</h2>
+                        </header>
+                        <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
+                    </div>
+                    <div class="6u 12u$(medium)">
+                        <header class="major">
+                            <h2>Most Popular Social Media</h2>
+                        </header>
+                        <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="actions">
+                        <li><a href="#one" class="button scrolly">Discover</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <!-- Simple header with fixed tabs. -->
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
             mdl-layout--fixed-tabs">
@@ -215,9 +246,6 @@
                     <div class="mdl-layout__header-row">
                         <!-- Title -->
                         <span class="mdl-layout-title">ITB Slackest Time</span>
-                        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon" style="float: right;">
-                        <i class="material-icons">more_vert</i>
-                        </button>
                         <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
                             for="demo-menu-lower-right">
                             <li class="mdl-menu__item">About</li>
@@ -328,17 +356,6 @@
                 </div>
             </section>
             </main>
-            <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
-                <a class="btn-floating btn-large red">
-                    <i class="large material-icons">mode_edit</i>
-                </a>
-                <ul>
-                    <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-                    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-                    <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                    <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-                </ul>
-            </div>
         </div>
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
         <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
