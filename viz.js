@@ -144,9 +144,9 @@ var path = d3.svg.line()
             .interpolate("basic");
 
 var color = [];
-color["2012"] = "#aaa";
-color["2013"] = "#555";
-color["2014"] = "#111";
+color["2012"] = "blue";
+color["2013"] = "red";
+color["2014"] = "green";
 
 chart.append("g")
     .classed("y-axis", true)
