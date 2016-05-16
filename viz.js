@@ -121,7 +121,7 @@ xScale = d3.time.scale()
             .domain([timeParser(MINVALUE), timeParser(MAXVALUE)])
             .range([0, width]);
 yScale = d3.scale.linear()
-            .domain([0, 100])
+            .domain([0, 50])
             .range([height, 0]);
 
 var xAxis = d3.svg.axis()
