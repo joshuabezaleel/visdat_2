@@ -99,12 +99,12 @@ MINVALUE = "00:00";
 MAXVALUE = "23:00";
 
 
-var w = 900;
-var h = 365;
+var w = 880;
+var h = 510;
 
 var margin = {
-    top: 10,
-    bottom: 30,
+    top: 75,
+    bottom: 70,
     left: 40,
     right: 40,
 };
@@ -182,8 +182,7 @@ var svg = d3.select(".visualization").append('svg')
             .attr("height", height+100);
 var chart = svg.append("g")
             .classed("display", true)
-            .attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
-
+            .attr("transform", "translate(" + margin.left + ", " + (margin.top-40) + ")");
 var facebook = chart.append("g")
                 .classed("facebook-chart", true)
                 .attr("transform", "translate(30, 0)");
@@ -196,38 +195,12 @@ var line = chart.append("g")
 var instagram = chart.append("g")
                 .classed("instagram-chart", true)
                 .attr("transform", "translate(30, 0)");
-
 var timeParser = d3.time.format("%H:%M").parse;
 
-// console.log("23:00");
-// console.log(timeParser("23:00"));
-
-// xScale = d3.time.scale()
-//             .domain(d3.extent(dataFacebook, function(d){
-//                 return timeParser(d.time);
-//             }))
-// 			// .domain([0, 0])
-//             .domain([timeParser(MINVALUE), timeParser(MAXVALUE)])
-//             .range([0, width]);
-// yScale = d3.scale.linear()
-//             .domain([0, 50])
-//             .range([height, 0]);
-
-// var xAxis = d3.svg.axis()
-//             .scale(xScale)
-//             .orient("bottom")
-//             .ticks(23)
-//             .tickFormat(d3.time.format("%H"));
-// var yAxis = d3.svg.axis()
-//             .scale(yScale)
-//             .orient("left");
-
-
-
 var color = [];
-color["2012"] = "blue";
-color["2013"] = "red";
-color["2014"] = "green";
+color["2012"] = "#80cbc4";
+color["2013"] = "#ab47bc";
+color["2014"] = "#ff5722";
 
 
 
@@ -240,19 +213,19 @@ chart.append("text")
     .text("(Percentage of User Online)");
 
 chart.append("text")
-    .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom + 30) + ")")
+    .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom - 20) + ")")
     .style("text-anchor", "middle")
-    .text("(Hour)");
+    .text("(Time in Hour)");
 
 var tip = d3.tip()
 	.attr('class', 'd3-tip')
 	.offset([-10, 0])
 	.html(function(d) {
-		return "<span style='color:red'>" + d.value + "</span>";
+		return "<span>" + d.value + "%</span>";
 	});
 svg.call(tip);
 
-
+var defs = chart.append('svg:defs');
 
 /* DECLARE FUNCTION */
 function showChart(params){
@@ -296,25 +269,25 @@ function showChart(params){
         .call(yAxis);
 
     this.selectAll(".bar")
-    .data(params.data)
-    .enter()
-        .append("rect").filter(function(d){
-            var time = timeParser(d.time).getHours();
-            var condition = (time >= minval) && (time <maxval) ;
-            return (batch[d.batch] && condition);
-        })
-        .classed("bar", true)
-        .attr("class", function(d){
-            return d3.select(this).attr("class") + "-" + timeParser(d.time).getHours();
-        })
-        .attr("x", function(d) { return xScale(timeParser(d.time)); })
-        .attr("width", function(d){
-            var thisVal = "" + (minval + 1) + ":00";
-            console.log(thisVal);
-            return xScale(timeParser(thisVal));
-        })
-        .attr("y", function(d) { return 0; })
-        .attr("height", function(d) { return height; });
+        .data(params.data)
+        .enter()
+            .append("rect").filter(function(d){
+                var time = timeParser(d.time).getHours();
+                var condition = (time >= minval) && (time <maxval) ;
+                return (batch[d.batch] && condition);
+            })
+            .classed("bar", true)
+            .attr("class", function(d){
+                return d3.select(this).attr("class") + "-" + timeParser(d.time).getHours();
+            })
+            .attr("x", function(d) { return xScale(timeParser(d.time)); })
+            .attr("width", function(d){
+                var thisVal = "" + (minval + 1) + ":00";
+                console.log(thisVal);
+                return xScale(timeParser(thisVal));
+            })
+            .attr("y", function(d) { return 0; })
+            .attr("height", function(d) { return height; });
 
     var dataNest = d3.nest()
             .key(function(d) {return d.batch;})
@@ -563,8 +536,11 @@ if ($("#slider-range").length){
       max: 23,
       values: [ 0, 23 ],
       step: 1,
+      slide: function(event, ui){
+        $(".min-range-text").text("min: " + ui.values[0]);
+        $(".max-range-text").text("max: " + ui.values[1]);
+      },
       change: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
         $(".min-range-text").text("min: " + ui.values[0]);
         $(".max-range-text").text("max: " + ui.values[1]);
         MINVALUE = ""+ ui.values[ 0 ] + ":00";
