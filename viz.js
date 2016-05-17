@@ -74,6 +74,7 @@ insight[21+6] = "Line 2013 vs 2014";
 contentInsight[21+6] = "LINE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
 insight[21+7] = "Line 2012 vs 2013 vs 2014";
 contentInsight[21+7] = "LINE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+
 /* Shown insight code*/
 var insight_code = 1;
 var ins_b_code = [];
@@ -90,7 +91,7 @@ $(".content-insight").text(contentInsight[insight_code]);
 
 MINVALUE = "00:00";
 MAXVALUE = "23:00";
->>>>>>> Stashed changes
+
 
 var w = 900;
 var h = 345;
@@ -105,89 +106,13 @@ var margin = {
 var width = w - margin.right - margin.left;
 var height = h - margin.top - margin.bottom;
 
-/*var dataFacebook = [
-    {value: 10, time:"00:00", batch: "2012"},
-    {value: 20, time:"01:00", batch: "2012"},
-    {value: 30, time:"02:00", batch: "2012"},
-    {value: 40, time:"03:00", batch: "2012"},
-    {value: 50, time:"04:00", batch: "2012"},
-    {value: 40, time:"05:00", batch: "2012"},
-    {value: 45, time:"06:00", batch: "2012"},
-    {value: 60, time:"07:00", batch: "2012"},
-    {value: 70, time:"08:00", batch: "2012"},
-    {value: 20, time:"09:00", batch: "2012"},
-    {value: 40, time:"10:00", batch: "2012"},
-    {value: 40, time:"11:00", batch: "2012"},
-    {value: 10, time:"12:00", batch: "2012"},
-    {value: 20, time:"13:00", batch: "2012"},
-    {value: 80, time:"14:00", batch: "2012"},
-    {value: 40, time:"15:00", batch: "2012"},
-    {value: 50, time:"16:00", batch: "2012"},
-    {value: 90, time:"17:00", batch: "2012"},
-    {value: 95, time:"18:00", batch: "2012"},
-    {value: 60, time:"19:00", batch: "2012"},
-    {value: 70, time:"20:00", batch: "2012"},
-    {value: 80, time:"21:00", batch: "2012"},
-    {value: 40, time:"22:00", batch: "2012"},
-    {value: 20, time:"23:00", batch: "2012"},
-    {value: 40, time:"00:00", batch: "2013"},
-    {value: 50, time:"01:00", batch: "2013"},
-    {value: 20, time:"02:00", batch: "2013"},
-    {value: 45, time:"03:00", batch: "2013"},
-    {value: 32, time:"04:00", batch: "2013"},
-    {value: 50, time:"05:00", batch: "2013"},
-    {value: 60, time:"06:00", batch: "2013"},
-    {value: 60, time:"07:00", batch: "2013"},
-    {value: 77, time:"08:00", batch: "2013"},
-    {value: 24, time:"09:00", batch: "2013"},
-    {value: 45, time:"10:00", batch: "2013"},
-    {value: 47, time:"11:00", batch: "2013"},
-    {value: 13, time:"12:00", batch: "2013"},
-    {value: 26, time:"13:00", batch: "2013"},
-    {value: 30, time:"14:00", batch: "2013"},
-    {value: 48, time:"15:00", batch: "2013"},
-    {value: 65, time:"16:00", batch: "2013"},
-    {value: 80, time:"17:00", batch: "2013"},
-    {value: 85, time:"18:00", batch: "2013"},
-    {value: 90, time:"19:00", batch: "2013"},
-    {value: 92, time:"20:00", batch: "2013"},
-    {value: 95, time:"21:00", batch: "2013"},
-    {value: 46, time:"22:00", batch: "2013"},
-    {value: 29, time:"23:00", batch: "2013"},
-    {value: 30, time:"00:00", batch: "2014"},
-    {value: 80, time:"01:00", batch: "2014"},
-    {value: 70, time:"02:00", batch: "2014"},
-    {value: 35, time:"03:00", batch: "2014"},
-    {value: 52, time:"04:00", batch: "2014"},
-    {value: 55, time:"05:00", batch: "2014"},
-    {value: 61, time:"06:00", batch: "2014"},
-    {value: 62, time:"07:00", batch: "2014"},
-    {value: 37, time:"08:00", batch: "2014"},
-    {value: 44, time:"09:00", batch: "2014"},
-    {value: 65, time:"10:00", batch: "2014"},
-    {value: 27, time:"11:00", batch: "2014"},
-    {value: 63, time:"12:00", batch: "2014"},
-    {value: 56, time:"13:00", batch: "2014"},
-    {value: 40, time:"14:00", batch: "2014"},
-    {value: 28, time:"15:00", batch: "2014"},
-    {value: 95, time:"16:00", batch: "2014"},
-    {value: 70, time:"17:00", batch: "2014"},
-    {value: 65, time:"18:00", batch: "2014"},
-    {value: 40, time:"19:00", batch: "2014"},
-    {value: 52, time:"20:00", batch: "2014"},
-    {value: 65, time:"21:00", batch: "2014"},
-    {value: 66, time:"22:00", batch: "2014"},
-    {value: 89, time:"23:00", batch: "2014"}
-
-];*/
-
 function convertToTime(time){
 	return time>9?""+time+":00":"0"+time+":00";
 }
 /* LOAD DATA FROM CSV */
 var numReady=0;
 var dataFacebook = [];
-d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/facebook.csv", function(d) {
+d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/gh-pages/facebook.csv", function(d) {
   return {
     value: +d.Percentage,
     time: convertToTime(+d.Time),
@@ -200,7 +125,7 @@ d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/faceboo
 });
 
 var dataTwitter=[];
-d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/twitter.csv", function(d) {
+d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/gh-pages/twitter.csv", function(d) {
   return {
     value: +d.Percentage,
     time: convertToTime(+d.Time),
@@ -213,7 +138,7 @@ d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/twitter
 });
 
 var dataLine = [];
-d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/line.csv", function(d) {
+d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/gh-pages/line.csv", function(d) {
   return {
     value: +d.Percentage,
     time: convertToTime(+d.Time),
@@ -226,7 +151,7 @@ d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/line.cs
 });
 
 var dataInstagram = [];
-d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/master/instagram.csv", function(d) {
+d3.csv("https://raw.githubusercontent.com/joshuabezaleel/visdat_2/gh-pages/instagram.csv", function(d) {
   return {
     value: +d.Percentage,
     time: convertToTime(+d.Time),
@@ -271,10 +196,11 @@ xScale = d3.time.scale()
             /*.domain(d3.extent(dataFacebook, function(d){
                 return timeParser(d.time);
             }))*/
-			.domain([0, 0])
+			// .domain([0, 0])
+            .domain([timeParser(MINVALUE), timeParser(MAXVALUE)])
             .range([0, width]);
 yScale = d3.scale.linear()
-            .domain([0, 100])
+            .domain([0, 50])
             .range([height, 0]);
 
 var xAxis = d3.svg.axis()
@@ -297,16 +223,12 @@ var path = d3.svg.line()
             .interpolate("basic");
 
 var color = [];
-color["2012"] = "#aaa";
-color["2013"] = "#555";
-color["2014"] = "#111";
+color["2012"] = "blue";
+color["2013"] = "red";
+color["2014"] = "green";
 
 chart.append("g")
-        .classed("x axis", true)
-        .attr("transform", "translate(0, " + height + ")")
-        ;//.call(xAxis);
-chart.append("g")
-    .classed("y axis", true)
+    .classed("y-axis", true)
     .attr("transform", "translate(0, 0)")
     .call(yAxis);
 
@@ -317,51 +239,71 @@ var tip = d3.tip()
 		return "<span style='color:red'>" + d.value + "</span>";
 	});
 svg.call(tip);
-/*showChart.call(facebook,{
-    data: dataFacebook,
-});*/
 
 /* DECLARE FUNCTION */
 function showChart(params){
 	//console.log(params.data);
     xScale = d3.time.scale()
-            .domain(d3.extent(params.data, function(d){
-                return timeParser(d.time);
-            }))
+            // .domain(d3.extent(params.data, function(d){
+            //     return timeParser(d.time);
+            // }))
+            .domain([timeParser(MINVALUE), timeParser(MAXVALUE)])
             .range([0, width]);
+    var maxval = timeParser(MAXVALUE).getHours();
+    var minval = timeParser(MINVALUE).getHours();
+    var ticksCount = maxval - minval + 1;
 	var xAxis = d3.svg.axis()
 				.scale(xScale)
 				.orient("bottom")
-				.ticks(23)
+				.ticks(ticksCount)
 				.tickFormat(d3.time.format("%H"));
 	chart.append("g")
-        .classed("x axis", true)
+        .classed("x-axis", true)
         .attr("transform", "translate(0, " + height + ")")
         .call(xAxis);
 	
     var dataNest = d3.nest()
             .key(function(d) {return d.batch;})
+            // .key(function(d) {return d.time;})
             .entries(params.data);
     var chartThis = this;
+
     dataNest.forEach(function(d) {
+        // console.log(d);
+        var e = [];
+        for (var i = minval; i < maxval + 1 ; i++){
+            e.push(d.values[i]);
+        }
         if (batch[d.key] == true){
-            console.log("add path: " + d.key);
-            chartThis.append("path")
-                .attr("class", "trendline")
-                .style("stroke", function(){
-                //console.log(d.key);
-                //console.log(color[d.key]);
-                    return color[d.key];
-                })
-                .attr("d", path(d.values));     
-        }  
+            var garis = chartThis.append("path")
+                        .attr("class", "trendline")
+                        .style("stroke", function(){
+                            return color[d.key];
+                        })
+                        .attr("d", path(e));
+            var totalLength = garis.node().getTotalLength();
+
+            garis
+              .attr("stroke-dasharray", totalLength + " " + totalLength)
+              .attr("stroke-dashoffset", totalLength)
+              .transition()
+                .duration(3000)
+                .ease("linear")
+                .attr("stroke-dashoffset", 0);
+
+        }
     });
 
     this.selectAll(".point")
         .data(params.data)
         .enter()
             .append("circle").filter(function(d){
-				return (batch[d.batch]);
+                // console.log(d);
+                // console.log(d.time);
+                var time = timeParser(d.time).getHours();
+                var condition = (time >= minval) && (time <=maxval) ;
+                // console.log(condition);
+				return (batch[d.batch] && condition);
             })
             .classed("point", true)
             .attr("r", 4)
@@ -377,7 +319,6 @@ function showChart(params){
 }
 
 $(".social-media-button").click(function(){
-    console.log("Jancuk");
     if ($(this).hasClass('active')){
         if (!checkOnlySocialMedia(whatSocialMedia($(this)))){
             $(this).removeClass('active');
@@ -385,7 +326,8 @@ $(".social-media-button").click(function(){
             alterSocialMedia(thisSocialMedia);
             deleteChart(thisSocialMedia);
             showAChart(thisSocialMedia);
-        }               
+			insight_code = (ins_s_code[thisSocialMedia]*7) + (insight_code%7==0?7:insight_code%7);
+        }
     } else {
         $(this).addClass('active');
         var thisSocialMedia = whatSocialMedia($(this));
@@ -394,6 +336,7 @@ $(".social-media-button").click(function(){
         $(this).siblings('.active').removeClass('active');
         deleteChart(thisSocialMedia);
         showAChart(thisSocialMedia);
+		insight_code = (ins_s_code[thisSocialMedia]*7) + (insight_code%7==0?7:insight_code%7);
     }
 	$(".selection-insight").text(insight[insight_code]);
     $(".content-insight").text(contentInsight[insight_code]);
@@ -408,6 +351,7 @@ $(".batch-button").click(function(){
             activeSocialMedia = whatSocialMedia($(".social-media-button.active"));
             deleteChart(activeSocialMedia);
             showAChart(activeSocialMedia);
+			insight_code = insight_code - ins_b_code[thisBatch];
         }
         debugBatch();
     } else {
@@ -417,6 +361,7 @@ $(".batch-button").click(function(){
         activeSocialMedia = whatSocialMedia($(".social-media-button.active"));
         deleteChart(activeSocialMedia);
         showAChart(activeSocialMedia);
+		insight_code = insight_code + ins_b_code[thisBatch];
     }
 	$(".selection-insight").text(insight[insight_code]);
     $(".content-insight").text(contentInsight[insight_code]);
@@ -548,8 +493,40 @@ function deleteChart(name){
     if (name == "instagram"){
         $(".instagram-chart").empty();
     }
+    $("g.x-axis").remove();
 }
+
+
 $(".facebook-tab").click(function () {
     $(".facebook-tab").css("background-color","#3b5998");
     $(".facebook-panel").css("background-color","#3b5998");
 })
+
+if ($("#slider-range").length){
+    console.log("ada nih");
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 23,
+      values: [ 0, 23 ],
+      step: 1,
+      change: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        $(".min-range-text").text("min: " + ui.values[0]);
+        $(".max-range-text").text("max: " + ui.values[1]);
+        MINVALUE = ""+ ui.values[ 0 ] + ":00";
+        MAXVALUE = ""+ ui.values[ 1 ] + ":00";
+        reChart();
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+}
+
+function reChart(){
+    // console.log("rechart");
+    var active = trueSocialMedia();
+    // console.log(active);
+    deleteChart(active);
+    showAChart(active);
+}
