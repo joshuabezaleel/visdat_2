@@ -252,6 +252,8 @@ var tip = d3.tip()
 	});
 svg.call(tip);
 
+
+
 /* DECLARE FUNCTION */
 function showChart(params){
     var nVal = [];
@@ -259,9 +261,6 @@ function showChart(params){
         nVal.push(params.data[x].value);
     }
     xScale = d3.time.scale()
-            // .domain(d3.extent(params.data, function(d){
-            //     return timeParser(d.time);
-            // }))
             .domain([timeParser(MINVALUE), timeParser(MAXVALUE)])
             .range([0, width]);
     yScale = d3.scale.linear()
@@ -295,9 +294,30 @@ function showChart(params){
         .classed("y-axis", true)
         .attr("transform", "translate(30, 0)")
         .call(yAxis);
+
+    this.selectAll(".bar")
+    .data(params.data)
+    .enter()
+        .append("rect").filter(function(d){
+            var time = timeParser(d.time).getHours();
+            var condition = (time >= minval) && (time <maxval) ;
+            return (batch[d.batch] && condition);
+        })
+        .classed("bar", true)
+        .attr("class", function(d){
+            return d3.select(this).attr("class") + "-" + timeParser(d.time).getHours();
+        })
+        .attr("x", function(d) { return xScale(timeParser(d.time)); })
+        .attr("width", function(d){
+            var thisVal = "" + (minval + 1) + ":00";
+            console.log(thisVal);
+            return xScale(timeParser(thisVal));
+        })
+        .attr("y", function(d) { return 0; })
+        .attr("height", function(d) { return height; });
+
     var dataNest = d3.nest()
             .key(function(d) {return d.batch;})
-            // .key(function(d) {return d.time;})
             .entries(params.data);
     var chartThis = this;
 
@@ -326,16 +346,13 @@ function showChart(params){
 
         }
     });
-
+   
     this.selectAll(".point")
         .data(params.data)
         .enter()
             .append("circle").filter(function(d){
-                // console.log(d);
-                // console.log(d.time);
                 var time = timeParser(d.time).getHours();
                 var condition = (time >= minval) && (time <=maxval) ;
-                // console.log(condition);
 				return (batch[d.batch] && condition);
             })
             .classed("point", true)
