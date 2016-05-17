@@ -61,7 +61,7 @@ MINVALUE = "00:00";
 MAXVALUE = "23:00";
 
 var w = 900;
-var h = 345;
+var h = 365;
 
 var margin = {
     top: 10,
@@ -139,20 +139,24 @@ function allReady(){
 /* INIT CHART */
 var svg = d3.select(".visualization").append('svg')
             .attr("id", "chart")
-            .attr("width", width + 110)
-            .attr("height", height+60);
+            .attr("width", width + 130)
+            .attr("height", height+100);
 var chart = svg.append("g")
             .classed("display", true)
             .attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
 
 var facebook = chart.append("g")
-                .classed("facebook-chart", true);
+                .classed("facebook-chart", true)
+                .attr("transform", "translate(30, 0)");
 var twitter = chart.append("g")
-                .classed("twitter-chart", true);
+                .classed("twitter-chart", true)
+                .attr("transform", "translate(30, 0)");
 var line = chart.append("g")
-                .classed("line-chart", true);
+                .classed("line-chart", true)
+                .attr("transform", "translate(30, 0)");
 var instagram = chart.append("g")
-                .classed("instagram-chart", true);
+                .classed("instagram-chart", true)
+                .attr("transform", "translate(30, 0)");
 
 var timeParser = d3.time.format("%H:%M").parse;
 
@@ -196,8 +200,21 @@ color["2014"] = "green";
 
 chart.append("g")
     .classed("y-axis", true)
-    .attr("transform", "translate(0, 0)")
+    .attr("transform", "translate(30, 0)")
     .call(yAxis);
+
+chart.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left)
+    .attr("x",0 - (height / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .text("(Percentage of User Online)");
+
+chart.append("text")
+    .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom + 30) + ")")
+    .style("text-anchor", "middle")
+    .text("(Hour)");
 
 var tip = d3.tip()
 	.attr('class', 'd3-tip')
@@ -226,7 +243,7 @@ function showChart(params){
 				.tickFormat(d3.time.format("%H"));
 	chart.append("g")
         .classed("x-axis", true)
-        .attr("transform", "translate(0, " + height + ")")
+        .attr("transform", "translate(30, " + (height) + ")")
         .call(xAxis);
 	
     var dataNest = d3.nest()
