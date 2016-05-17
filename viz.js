@@ -254,7 +254,7 @@ function showChart(params){
               .attr("stroke-dasharray", totalLength + " " + totalLength)
               .attr("stroke-dashoffset", totalLength)
               .transition()
-                .duration(2000)
+                .duration(3000)
                 .ease("linear")
                 .attr("stroke-dashoffset", 0);
 
