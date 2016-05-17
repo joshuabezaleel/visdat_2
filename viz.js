@@ -88,6 +88,12 @@ ins_s_code["instagram"] = 2;
 ins_s_code["line"] = 3;
 $(".selection-insight").text(insight[insight_code]);
 $(".content-insight").text(contentInsight[insight_code]);
+var InsightLogo = [];
+InsightLogo["facebook"] = "images/logo-facebook.png";
+InsightLogo["twitter"] = "images/logo-twitter.png";
+InsightLogo["instagram"] = "images/logo-instagram.png";
+InsightLogo["line"] = "images/logo-line.png";
+$(".insight-logo").attr('src', InsightLogo["facebook"]);
 
 MINVALUE = "00:00";
 MAXVALUE = "23:00";
@@ -327,6 +333,7 @@ $(".social-media-button").click(function(){
             deleteChart(thisSocialMedia);
             showAChart(thisSocialMedia);
 			insight_code = (ins_s_code[thisSocialMedia]*7) + (insight_code%7==0?7:insight_code%7);
+			$(".insight-logo").attr('src', InsightLogo[thisSocialMedia]);
         }
     } else {
         $(this).addClass('active');
@@ -337,6 +344,7 @@ $(".social-media-button").click(function(){
         deleteChart(thisSocialMedia);
         showAChart(thisSocialMedia);
 		insight_code = (ins_s_code[thisSocialMedia]*7) + (insight_code%7==0?7:insight_code%7);
+		$(".insight-logo").attr('src', InsightLogo[thisSocialMedia]);
     }
 	$(".selection-insight").text(insight[insight_code]);
     $(".content-insight").text(contentInsight[insight_code]);
