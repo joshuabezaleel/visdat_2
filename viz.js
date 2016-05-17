@@ -11,6 +11,52 @@ batch = {
     "2014" : false
 };
 
+var insight = new Array(30);
+/* Facebook Insight */
+insight[0+1] = "Facebook 2012 only";
+insight[0+2] = "Facebook 2013 only";
+insight[0+4] = "Facebook 2014 only";
+insight[0+3] = "Facebook 2012 vs 2013";
+insight[0+5] = "Facebook 2012 vs 2014";
+insight[0+6] = "Facebook 2013 vs 2014";
+insight[0+7] = "Facebook 2012 vs 2013 vs 2014";
+/* Twitter Insight */
+insight[7+1] = "Twitter 2012 only";
+insight[7+2] = "Twitter 2013 only";
+insight[7+4] = "Twitter 2014 only";
+insight[7+3] = "Twitter 2012 vs 2013";
+insight[7+5] = "Twitter 2012 vs 2014";
+insight[7+6] = "Twitter 2013 vs 2014";
+insight[7+7] = "Twitter 2012 vs 2013 vs 2014";
+/* Instagram Insight */
+insight[14+1] = "Instagram 2012 only";
+insight[14+2] = "Instagram 2013 only";
+insight[14+4] = "Instagram 2014 only";
+insight[14+3] = "Instagram 2012 vs 2013";
+insight[14+5] = "Instagram 2012 vs 2014";
+insight[14+6] = "Instagram 2013 vs 2014";
+insight[14+7] = "Instagram 2012 vs 2013 vs 2014";
+/* Line Insight */
+insight[21+1] = "Line 2012 only";
+insight[21+2] = "Line 2013 only";
+insight[21+4] = "Line 2014 only";
+insight[21+3] = "Line 2012 vs 2013";
+insight[21+5] = "Line 2012 vs 2014";
+insight[21+6] = "Line 2013 vs 2014";
+insight[21+7] = "Line 2012 vs 2013 vs 2014";
+/* Shown insight code*/
+var insight_code = 1;
+var ins_b_code = [];
+ins_b_code["2012"] = 1;
+ins_b_code["2013"] = 2;
+ins_b_code["2014"] = 4;
+var ins_s_code = [];
+ins_s_code["facebook"] = 0;
+ins_s_code["twitter"] = 1;
+ins_s_code["instagram"] = 2;
+ins_s_code["line"] = 3;
+$(".selection-insight").text(insight[insight_code]);
+
 MINVALUE = "00:00";
 MAXVALUE = "23:00";
 
@@ -247,7 +293,8 @@ $(".social-media-button").click(function(){
             alterSocialMedia(thisSocialMedia);
             deleteChart(thisSocialMedia);
             showAChart(thisSocialMedia);
-        }               
+			insight_code = (ins_s_code[thisSocialMedia]*7) + (insight_code%7==0?7:insight_code%7);
+        }
     } else {
         $(this).addClass('active');
         var thisSocialMedia = whatSocialMedia($(this));
@@ -256,7 +303,9 @@ $(".social-media-button").click(function(){
         $(this).siblings('.active').removeClass('active');
         deleteChart(thisSocialMedia);
         showAChart(thisSocialMedia);
+		insight_code = (ins_s_code[thisSocialMedia]*7) + (insight_code%7==0?7:insight_code%7);
     }
+	$(".selection-insight").text(insight[insight_code]);
 });
 
 $(".batch-button").click(function(){
@@ -268,6 +317,7 @@ $(".batch-button").click(function(){
             activeSocialMedia = whatSocialMedia($(".social-media-button.active"));
             deleteChart(activeSocialMedia);
             showAChart(activeSocialMedia);
+			insight_code = insight_code - ins_b_code[thisBatch];
         }
         debugBatch();
     } else {
@@ -277,7 +327,9 @@ $(".batch-button").click(function(){
         activeSocialMedia = whatSocialMedia($(".social-media-button.active"));
         deleteChart(activeSocialMedia);
         showAChart(activeSocialMedia);
+		insight_code = insight_code + ins_b_code[thisBatch];
     }
+	$(".selection-insight").text(insight[insight_code]);
 })
 
 function whatSocialMedia($element){
