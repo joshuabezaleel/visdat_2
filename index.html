@@ -141,14 +141,14 @@
         float:left;
         }
         .point{
-        background-color: black;
+        fill: #222;
         }
         .d3-tip {
         line-height: 1;
         font-weight: bold;
         padding: 12px;
-        background: rgba(0, 0, 0, 0.8);
-        color: #fff;
+        background: rgba(255, 255, 255, 0.8);
+        color: #000;
         border-radius: 2px;
         z-index: 1100;
         }
@@ -159,7 +159,7 @@
         font-size: 10px;
         width: 100%;
         line-height: 1;
-        color: rgba(0, 0, 0, 0.8);
+        color: rgba(255, 255, 255, 0.8);
         content: "\25BC";
         position: absolute;
         text-align: center;
@@ -171,16 +171,16 @@
         left: 0;
         }
         a.facebook.active.social-media-button {
-        background-color: #3b5998
+        background-color: #3b5998;
         }
         a.twitter.active.social-media-button {
-        background-color: #4099FF
+        background-color: #4099FF;
         }
         a.instagram.active.social-media-button {
-        background-color: #9b6954
+        background-color: #9b6954;
         }
         a.line.active.social-media-button {
-        background-color: #0AC50A
+        background-color: #0AC50A;
         }
         .collection-item.social-media-button {
         padding:10px 10px;
@@ -192,8 +192,16 @@
         .collection a.collection-item.batch-button {
         color: rgb(63,81,181);
         }
-        .collection a.collection-item.batch-button.active {
-        background-color: rgb(63,81,181);
+        .collection a.collection-item.batch-button.batch-2012.active {
+        background-color: #80cbc4;
+        color: #FFFFFF;
+        }
+        .collection a.collection-item.batch-button.batch-2013.active {
+        background-color: #ab47bc;
+        color: #FFFFFF;
+        }
+        .collection a.collection-item.batch-button.batch-2014.active {
+        background-color: #ff5722;
         color: #FFFFFF;
         }
         .collection a.collection-item.social-media-button {
@@ -235,8 +243,6 @@
 
         .bar-0, .bar-23{
             fill: #00375C;
-            mask: url('assets/image/moon.png') no-repeat 50% 10%;
-            -webkit-mask: url('assets/image/moon.png') no-repeat 50% 10%;
         }
         .bar-1, .bar-22{
             fill: #003d68;
@@ -254,25 +260,64 @@
             fill: #89ADA3;
         }
         .bar-6, .bar-17{
-            fill: #ffE082;
+            fill: #FFECB3;
         }
         .bar-7, .bar-16{
-            fill: #FFD54F ;
+            fill: #FFE082;
         }
         .bar-8, .bar-15{
-            fill: #FFCA28;
+            fill: #FFD54F;
         }
         .bar-9, .bar-14{
-            fill: #FFC107;
+            fill: #FFCA28;
         }
         .bar-10, .bar-13{
-            fill: #FFB300;
+            fill: #FFC107;
         }
         .bar-11 {
-            fill: #FFA200;
+            fill: #FFB300;
         }
         .bar-12{
-            fill: #FFA000;
+            fill: #FFA200;
+        }
+
+        .mid.mid-to{
+            padding: 0;
+        }
+
+        .main.style1{
+            padding-top: 80px;
+            padding-bottom: 30px;
+        }
+        .content-header{
+            background-color: #4686a0;
+            color: rgba(255, 255, 255, 0.75);
+            background-attachment: fixed,   fixed,  fixed;
+            background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
+            background-position: top left,  center center, center center;
+            background-size: auto,  cover,  cover;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+        .content-header h1{
+            color: #fff;
+            font-weight: bolder;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .page-content .row{
+            margin: 0;
+        }
+        .col.s3.sideboard {
+            width: 20%;
+        }
+        .insight-container{
+            margin-top: 50px;
+        }
+        .col.s3.logo{
+            text-align: left;
+            padding-left: 25px;
         }
         </style>
         <link rel="stylesheet" href="assets/css/main.css" />
@@ -280,12 +325,12 @@
     <body>
         <section id="header" style="padding: 1em 0 1em 0">
             <div class="inner">
-                <img style="width:10%" src="images/logo.png"/>
-                <h1><strong>ITB Slackest Time</strong></h1>
+                <img style="width:7%" src="images/logo.png"/>
+                <h1 style="font-size: 2em;"><strong>ITB Slackest Time</strong></h1>
             </div>
         </section>
         <!-- One -->
-        <section class="main style1" style="padding: 4em 0em 0em 4em">
+        <section class="main style1" >
             <div class="container">
                 <div class="row 150%">
                     <div class="col l6">
@@ -316,7 +361,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="mid">
+                    <div class="mid mid-to">
                         <ul class="actions">
                             <li><a href="#content" class="button scrolly">Find out More</a></li>
                         </ul>
@@ -326,27 +371,35 @@
         </section>
         <!-- Simple header with fixed tabs. -->
         <div id="content" class="">
+            <div class="content-header">
+                <h1>Compare Social Media</h1>
+            </div>
             <main class="mdl-layout__content">
             <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
                 <div class="page-content">
                     <div class="row">
                         <div class="col s3 sideboard">
+                            <h1 style="margin-bottom: 10px; font-size:1.75em;">Social Media</h1>
                             <div class="collection social-media-filter">
                                 <a class="collection-item active social-media-button facebook">Facebook</a>
                                 <a class="collection-item social-media-button twitter">Twitter</a>
                                 <a class="collection-item social-media-button instagram">Instagram</a>
                                 <a class="collection-item social-media-button line">LINE</a>
                             </div>
+                            <h1 style="margin-bottom: 10px; font-size:1.75em;">Batch</h1>
                             <div class="collection social-media-filter">
-                                <a class="collection-item active batch-button 2012">2012</a>
-                                <a class="collection-item batch-button 2013">2013</a>
-                                <a class="collection-item batch-button 2014">2014</a>
+                                <a class="collection-item active batch-button batch-2012 2012">2012</a>
+                                <a class="collection-item batch-button batch-2013 2013">2013</a>
+                                <a class="collection-item batch-button batch-2014 2014">2014</a>
                             </div>
+                            <a href="#insight-container" style="border: none;">
+                                <button class="button scrolly">See Insight</button>
+                            </a>
                         </div>
                         <div  class="row">
                             <div class="col s12">
                                 <div class="vizchart">
-                                    <div class="visualization">
+                                    <div class="visualization" style="margin-top:30px;">
                                         <!-- <h1>THIS IS SPARTA</h1> -->
                                     </div>
                                     <div id="slider-range"></div>
@@ -356,23 +409,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" style="height: 80%; width: 80%;">
-                        <div class="col s9 offset-s4">
-                            <header class="major">
-                                <h2>
-                                <div class="selection-insight"></div>
-                                </h2>
-                            </header>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
-            <div class="container" style="height: 80%; width: 80%;">
+            <div id="insight-container" class="container insight-container" style="height: 80%; width: 100%;">
                 <div class="row">
-                    <div class="col s3">
-                        <img src="images/logo.png" style="height: 60%; width: 60%;" class="insight-logo">
+                    <div class="col s3 logo">
+                        <img src="images/logo.png" style="height: auto; width: 80%;" class="insight-logo">
                     </div>
-                    <div class="col s9 content-insight">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                    <div class="col s9" style="text-align: left;">
+                        <header class="major">
+                            <h2>
+                            <div class="selection-insight"></div>
+                            </h2>
+                        </header>
+                        <div class="content-insight">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+                    </div>
                 </div>
             </div>
             </main>
