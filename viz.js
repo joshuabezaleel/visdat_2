@@ -202,45 +202,34 @@ var timeParser = d3.time.format("%H:%M").parse;
 // console.log("23:00");
 // console.log(timeParser("23:00"));
 
-xScale = d3.time.scale()
-            /*.domain(d3.extent(dataFacebook, function(d){
-                return timeParser(d.time);
-            }))*/
-			// .domain([0, 0])
-            .domain([timeParser(MINVALUE), timeParser(MAXVALUE)])
-            .range([0, width]);
-yScale = d3.scale.linear()
-            .domain([0, 50])
-            .range([height, 0]);
+// xScale = d3.time.scale()
+//             .domain(d3.extent(dataFacebook, function(d){
+//                 return timeParser(d.time);
+//             }))
+// 			// .domain([0, 0])
+//             .domain([timeParser(MINVALUE), timeParser(MAXVALUE)])
+//             .range([0, width]);
+// yScale = d3.scale.linear()
+//             .domain([0, 50])
+//             .range([height, 0]);
 
-var xAxis = d3.svg.axis()
-            .scale(xScale)
-            .orient("bottom")
-            .ticks(23)
-            .tickFormat(d3.time.format("%H"));
-var yAxis = d3.svg.axis()
-            .scale(yScale)
-            .orient("left");
+// var xAxis = d3.svg.axis()
+//             .scale(xScale)
+//             .orient("bottom")
+//             .ticks(23)
+//             .tickFormat(d3.time.format("%H"));
+// var yAxis = d3.svg.axis()
+//             .scale(yScale)
+//             .orient("left");
 
-var path = d3.svg.line()
-            .x(function(d){
-                var time = timeParser(d.time);
-                return xScale(time);
-            })
-            .y(function(d){
-                return yScale(d.value);
-            })
-            .interpolate("basic");
+
 
 var color = [];
 color["2012"] = "blue";
 color["2013"] = "red";
 color["2014"] = "green";
 
-chart.append("g")
-    .classed("y-axis", true)
-    .attr("transform", "translate(30, 0)")
-    .call(yAxis);
+
 
 chart.append("text")
     .attr("transform", "rotate(-90)")
@@ -265,13 +254,28 @@ svg.call(tip);
 
 /* DECLARE FUNCTION */
 function showChart(params){
-	//console.log(params.data);
+    var nVal = [];
+    for ( x in params.data){
+        nVal.push(params.data[x].value);
+    }
     xScale = d3.time.scale()
             // .domain(d3.extent(params.data, function(d){
             //     return timeParser(d.time);
             // }))
             .domain([timeParser(MINVALUE), timeParser(MAXVALUE)])
             .range([0, width]);
+    yScale = d3.scale.linear()
+            .domain([0, d3.max(nVal) + 5])
+            .range([height, 0]);
+    var path = d3.svg.line()
+            .x(function(d){
+                var time = timeParser(d.time);
+                return xScale(time);
+            })
+            .y(function(d){
+                return yScale(d.value);
+            })
+            .interpolate("basic");
     var maxval = timeParser(MAXVALUE).getHours();
     var minval = timeParser(MINVALUE).getHours();
     var ticksCount = maxval - minval + 1;
@@ -280,11 +284,17 @@ function showChart(params){
 				.orient("bottom")
 				.ticks(ticksCount)
 				.tickFormat(d3.time.format("%H"));
+    var yAxis = d3.svg.axis()
+            .scale(yScale)
+            .orient("left");
 	chart.append("g")
         .classed("x-axis", true)
         .attr("transform", "translate(30, " + (height) + ")")
         .call(xAxis);
-	
+	chart.append("g")
+        .classed("y-axis", true)
+        .attr("transform", "translate(30, 0)")
+        .call(yAxis);
     var dataNest = d3.nest()
             .key(function(d) {return d.batch;})
             // .key(function(d) {return d.time;})
@@ -519,6 +529,7 @@ function deleteChart(name){
         $(".instagram-chart").empty();
     }
     $("g.x-axis").remove();
+    $("g.y-axis").remove();
 }
 
 
