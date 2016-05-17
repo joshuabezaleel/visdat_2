@@ -9,8 +9,92 @@ batch = {
     "2012" : true,
     "2013" : false,
     "2014" : false
+<<<<<<< Updated upstream
 }
 //console.log($(".social-media-button"));
+=======
+};
+
+var insight = new Array(30);
+var contentInsight = new Array(30);
+
+/* Facebook Insight */
+insight[0+1] = "Facebook 2012 only";
+contentInsight[0+1] = "Facebook Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[0+2] = "Facebook 2013 only";
+contentInsight[0+2] = "Facebook Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[0+4] = "Facebook 2014 only";
+contentInsight[0+4] = "Facebook Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[0+3] = "Facebook 2012 vs 2013";
+contentInsight[0+3] = "Facebook Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[0+5] = "Facebook 2012 vs 2014";
+contentInsight[0+5] = "Facebook Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[0+6] = "Facebook 2013 vs 2014";
+contentInsight[0+6] = "Facebook Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[0+7] = "Facebook 2012 vs 2013 vs 2014";
+contentInsight[0+7] = "Facebook Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+/* Twitter Insight */
+insight[7+1] = "Twitter 2012 only";
+contentInsight[7+1] = "Twitter Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[7+2] = "Twitter 2013 only";
+contentInsight[7+2] = "Twitter Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[7+4] = "Twitter 2014 only";
+contentInsight[7+4] = "Twitter Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[7+3] = "Twitter 2012 vs 2013";
+contentInsight[7+3] = "Twitter Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[7+5] = "Twitter 2012 vs 2014";
+contentInsight[7+5] = "Twitter Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[7+6] = "Twitter 2013 vs 2014";
+contentInsight[7+6] = "Twitter Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[7+7] = "Twitter 2012 vs 2013 vs 2014";
+contentInsight[7+7] = "Twitter Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+/* Instagram Insight */
+insight[14+1] = "Instagram 2012 only";
+contentInsight[14+1] = "Instagram Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[14+2] = "Instagram 2013 only";
+contentInsight[14+2] = "Instagram Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[14+4] = "Instagram 2014 only";
+contentInsight[14+4] = "Instagram Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[14+3] = "Instagram 2012 vs 2013";
+contentInsight[14+3] = "Instagram Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[14+5] = "Instagram 2012 vs 2014";
+contentInsight[14+5] = "Instagram Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[14+6] = "Instagram 2013 vs 2014";
+contentInsight[14+6] = "Instagram Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[14+7] = "Instagram 2012 vs 2013 vs 2014";
+contentInsight[14+7] = "Instagram Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+/* Line Insight */
+insight[21+1] = "Line 2012 only";
+contentInsight[21+1] = "LINE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[21+2] = "Line 2013 only";
+contentInsight[21+2] = "LINE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[21+4] = "Line 2014 only";
+contentInsight[21+4] = "LINE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[21+3] = "Line 2012 vs 2013";
+contentInsight[21+3] = "LINE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[21+5] = "Line 2012 vs 2014";
+contentInsight[21+5] = "LINE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[21+6] = "Line 2013 vs 2014";
+contentInsight[21+6] = "LINE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+insight[21+7] = "Line 2012 vs 2013 vs 2014";
+contentInsight[21+7] = "LINE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus harum quibusdam labore illum tenetur nam reprehenderit pariatur quia porro quam minus distinctio, temporibus eius cum doloribus rem voluptatem voluptates totam."
+/* Shown insight code*/
+var insight_code = 1;
+var ins_b_code = [];
+ins_b_code["2012"] = 1;
+ins_b_code["2013"] = 2;
+ins_b_code["2014"] = 4;
+var ins_s_code = [];
+ins_s_code["facebook"] = 0;
+ins_s_code["twitter"] = 1;
+ins_s_code["instagram"] = 2;
+ins_s_code["line"] = 3;
+$(".selection-insight").text(insight[insight_code]);
+$(".content-insight").text(contentInsight[insight_code]);
+
+MINVALUE = "00:00";
+MAXVALUE = "23:00";
+>>>>>>> Stashed changes
 
 var w = 900;
 var h = 345;
@@ -315,6 +399,11 @@ $(".social-media-button").click(function(){
         deleteChart(thisSocialMedia);
         showAChart(thisSocialMedia);
     }
+<<<<<<< Updated upstream
+=======
+	$(".selection-insight").text(insight[insight_code]);
+    $(".content-insight").text(contentInsight[insight_code]);
+>>>>>>> Stashed changes
 });
 
 $(".batch-button").click(function(){
@@ -336,6 +425,11 @@ $(".batch-button").click(function(){
         deleteChart(activeSocialMedia);
         showAChart(activeSocialMedia);
     }
+<<<<<<< Updated upstream
+=======
+	$(".selection-insight").text(insight[insight_code]);
+    $(".content-insight").text(contentInsight[insight_code]);
+>>>>>>> Stashed changes
 })
 
 function whatSocialMedia($element){
