@@ -9,10 +9,6 @@ batch = {
     "2012" : true,
     "2013" : false,
     "2014" : false
-<<<<<<< Updated upstream
-}
-//console.log($(".social-media-button"));
-=======
 };
 
 var insight = new Array(30);
@@ -399,11 +395,8 @@ $(".social-media-button").click(function(){
         deleteChart(thisSocialMedia);
         showAChart(thisSocialMedia);
     }
-<<<<<<< Updated upstream
-=======
 	$(".selection-insight").text(insight[insight_code]);
     $(".content-insight").text(contentInsight[insight_code]);
->>>>>>> Stashed changes
 });
 
 $(".batch-button").click(function(){
@@ -425,11 +418,8 @@ $(".batch-button").click(function(){
         deleteChart(activeSocialMedia);
         showAChart(activeSocialMedia);
     }
-<<<<<<< Updated upstream
-=======
 	$(".selection-insight").text(insight[insight_code]);
     $(".content-insight").text(contentInsight[insight_code]);
->>>>>>> Stashed changes
 })
 
 function whatSocialMedia($element){
