@@ -13,77 +13,125 @@ batch = {
 
 var insight = new Array(30);
 var contentInsight = new Array(30);
+var bestHour = new Array(30);
+var worstHour = new Array(30);
 
 /* Facebook Insight */
 insight[0+1] = "Facebook 2012 only";
-contentInsight[0+1] = "The graph had the peak at 01.00 and 20.00. Probably checking social media before studying and before going to bed? "
+contentInsight[0+1] = "The graph had the peak at 01.00 and 20.00. Probably checking social media before studying and before going to bed?"
+bestHour[0+1] = "<b>Best Hour 2012 : 20.00-21.00</b>";
+worstHour[0+1] = "<b>Worst Hour 2012 : 04.00-05.00</b>";
 insight[0+2] = "Facebook 2013 only";
 contentInsight[0+2] = "An escalation from 08.00 to 13.00 told us it was never a good idea to have your classes in the morning. Beware, lecturers, please be funny. Or else we'll get bored."
+bestHour[0+2] = "<b>Best Hour 2013 : 20.00-21.00</b>";
+worstHour[0+2] = "<b>Worst Hour 2013 : 03.00-04.00</b>";
 insight[0+4] = "Facebook 2014 only";
 contentInsight[0+4] = "No interesting peak at this graph. Probably freshmen are still pretty free to check the timeline."
+bestHour[0+4] = "<b>Best Hour 2014 : 20.00-21.00</b>";
+worstHour[0+4] = "<b>Worst Hour 2014 : 15.00-16.00</b>";
 insight[0+3] = "Facebook 2012 vs 2013";
 contentInsight[0+3] = "2013 had a higher peak at the noon compared to 2012."
+bestHour[0+3] = "<b>Best Hour 2012 : 20.00-21.00 <br> Best Hour 2013 : 20.00-21.00</b>";
+worstHour[0+3] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2013 : 03.00-04.00</b>";
 insight[0+5] = "Facebook 2012 vs 2014";
 contentInsight[0+5] = "Both batches have pretty much the same trend of using Facebook. Lunch time!"
+bestHour[0+5] = "<b>Best Hour 2012 : 20.00-21.00 <br> Best Hour 2014 : 20.00-21.00</b>";
+worstHour[0+5] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2014 : 15.00-16.00</b>";
 insight[0+6] = "Facebook 2013 vs 2014";
 contentInsight[0+6] = "2014 has a higher amount of night owls than 2013."
+bestHour[0+6] = "<b>Best Hour 2013 : 20.00-21.00 <br> Best Hour 2014 : 20.00-21.00</b>";
+worstHour[0+6] = "<b>Worst Hour 2013 : 03.00-04.00 <br> Worst Hour 2014 : 15.00-16.00</b>";
 insight[0+7] = "Facebook 2012 vs 2013 vs 2014";
 contentInsight[0+7] = "Facebook had the same highest peak accross the batches which is 20.00"
+bestHour[0+7] = "<b>Best Hour 2012 : 20.00-21.00 <br> Best Hour 2013 : 20.00-21.00 <br> Best Hour 2014 : 20.00-21.00</b>";
+worstHour[0+7] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2013 : 03.00-04.00 <br> Worst Hour 2014 : 15.00-16.00</b>";
 /* Twitter Insight */
 insight[7+1] = "Twitter 2012 only";
 contentInsight[7+1] = "A steep slope at 01.00. Time to go to bed."
+bestHour[7+1] = "<b>Best Hour 2012 : 19.00-22.00</b>";
+worstHour[7+1] = "<b>Worst Hour 2012 : 04.00-05.00</b>";
 insight[7+2] = "Twitter 2013 only";
 contentInsight[7+2] = "Flat in the morning and super steep at before and after 20."
+bestHour[7+2] = "<b>Best Hour 2013 : 20.00-21.00</b>";
+worstHour[7+2] = "<b>Worst Hour 2013 : 01.00-10.00</b>";
 insight[7+4] = "Twitter 2014 only";
 contentInsight[7+4] = "More people who check Twitter at 3 than at noon? Night owls FTW."
+bestHour[7+4] = "<b>Best Hour 2014 : 20.00-22.00</b>";
+worstHour[7+4] = "<b>Worst Hour 2014 : 06.00-07.00</b>";
 insight[7+3] = "Twitter 2012 vs 2013";
 contentInsight[7+3] = "2012 had a few peaks while 2013 only had one at 20, and it's higher than 2012's!"
+bestHour[7+3] = "<b>Best Hour 2012 : 19.00-22.00 <br> Best Hour 2013 : 20.00-21.00</b>";
+worstHour[7+3] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2013 : 01.00-10.00</b>";
 insight[7+5] = "Twitter 2012 vs 2014";
 contentInsight[7+5] = "2014 is dormant at the afternoon but can be more active at dawn."
+bestHour[7+5] = "<b>Best Hour 2012 : 19.00-22.00 <br> Best Hour 2014 : 20.00-22.00</b>";
+worstHour[7+5] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2014 : 06.00-07.00</b>";
 insight[7+6] = "Twitter 2013 vs 2014";
 contentInsight[7+6] = "2013's is flat in the morning while 2014's one is flat from 9 to 17."
+bestHour[7+6] = "<b>Best Hour 2013 : 20.00-21.00 <br> Best Hour 2014 : 20.00-22.00</b>";
+worstHour[7+6] = "<b>Worst Hour 2013 : 01.00-10.00 <br> Worst Hour 2014 : 06.00-07.00</b>";
 insight[7+7] = "Twitter 2012 vs 2013 vs 2014";
 contentInsight[7+7] = "2012 and 2014 graphs are pretty much the same trend, but the silent 2012ian have the spike at 20.00. Still a mystery."
+bestHour[7+7] = "<b>Best Hour 2012 : 19.00-22.00 <br> Best Hour 2013 : 20.00-21.00 <br> Best Hour 2014 : 20.00-22.00</b>";
+worstHour[7+7] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2013 : 01.00-10.00 <br> Worst Hour 2014 : 06.00-07.00</b>";
 /* Instagram Insight */
 insight[14+1] = "Instagram 2012 only";
 contentInsight[14+1] = "Building up the increasing trends from 4 to 20. And then just realized you have bunch of homeworks at midnight."
+bestHour[14+1] = "<b>Best Hour 2012 : 20.00-21.00</b>";
+worstHour[14+1] = "<b>Worst Hour 2012 : 04.00-05.00</b>";
 insight[14+2] = "Instagram 2013 only";
 contentInsight[14+2] = "18.00: I'm gonna check the timeline just for 5 minutes. 21.00: Papers, homeworks, tests, exams and stuffs.."
+bestHour[14+2] = "<b>Best Hour 2013 : 20.00-21.00</b>";
+worstHour[14+2] = "<b>Worst Hour 2013 : 01.00-04.00</b>";
 insight[14+4] = "Instagram 2014 only";
 contentInsight[14+4] = "No interesting peak at this graph. Probably freshmen are still pretty free to check the timeline."
+bestHour[14+4] = "<b>Best Hour 2014 : 20.00-21.00</b>";
+worstHour[14+4] = "<b>Worst Hour 2014 : 04.00-05.00</b>";
 insight[14+3] = "Instagram 2012 vs 2013";
 contentInsight[14+3] = "2012 is increasing steadily and 2013 had some peaks. Yeah we know, classes can be pretty boring."
+bestHour[14+3] = "<b>Best Hour 2012 : 20.00-21.00 <br> Best Hour 2013 : 20.00-21.00</b>";
+worstHour[14+3] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2013 : 01.00-04.00</b>";
 insight[14+5] = "Instagram 2012 vs 2014";
 contentInsight[14+5] = "Both of them are pretty much the same, while the opposite peak could be the different of classes of those batches."
+bestHour[14+5] = "<b>Best Hour 2012 : 20.00-21.00 <br> Best Hour 2014 : 20.00-21.00</b>";
+worstHour[14+5] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2014 : 04.00-05.00</b>";
 insight[14+6] = "Instagram 2013 vs 2014";
 contentInsight[14+6] = "The two graphs had quite a few crossings, about 6. It can be inferred that the 2 batches had pretty different schedules."
+bestHour[14+6] = "<b>Best Hour 2013 : 20.00-21.00 <br> Best Hour 2014 : 20.00-22.00</b>";
+worstHour[14+6] = "<b>Worst Hour 2013 : 01.00-04.00 <br> Worst Hour 2014 : 04.00-05.00</b>";
 insight[14+7] = "Instagram 2012 vs 2013 vs 2014";
 contentInsight[14+7] = "Instagram still used quite a lot but there are many crossings that can be seen from the graph."
+bestHour[14+7] = "<b>Best Hour 2012 : 20.00-21.00 <br> Best Hour 2013 : 20.00-21.00 <br> Best Hour 2014 : 20.00-21.00</b>";
+worstHour[14+7] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2013 : 01.00-04.00 <br> Worst Hour 2014 : 04.00-05.00</b>";
 /* Line Insight */
 insight[21+1] = "Line 2012 only";
 contentInsight[21+1] = "Building up the increasing trends from 4 to 21. And then just realized you have bunch of homeworks at midnight."
+bestHour[21+1] = "<b>Best Hour 2012 : 21.00-22.00</b>";
+worstHour[21+1] = "<b>Worst Hour 2012 : 04.00-05.00</b>";
 insight[21+2] = "Line 2013 only";
 contentInsight[21+2] = "Building up the increasing trends from 4 to 21. And then just realized you have bunch of homeworks at midnight."
+bestHour[21+2] = "<b>Best Hour 2013 : 20.00-21.00</b>";
+worstHour[21+2] = "<b>Worst Hour 2013 : 04.00-05.00</b>";
 insight[21+4] = "Line 2014 only";
 contentInsight[21+4] = "LINE's chat feature is used extensively to contact friends in pretty much every ocassions."
+bestHour[21+4] = "<b>Best Hour 2014 : 21.00-22.00</b>";
+worstHour[21+4] = "<b>Worst Hour 2014 : 01.00-02.00</b>";
 insight[21+3] = "Line 2012 vs 2013";
 contentInsight[21+3] = "The two graphs follow pretty much the same trend."
+bestHour[21+3] = "<b>Best Hour 2012 : 21.00-22.00 <br> Best Hour 2013 : 20.00-21.00</b>";
+worstHour[21+3] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2013 : 04.00-05.00</b>";
 insight[21+5] = "Line 2012 vs 2014";
 contentInsight[21+5] = "While 2012 graph is declining from 01.00 to 04.00, the 2014 one is increasing."
+bestHour[21+5] = "<b>Best Hour 2012 : 21.00-22.00 <br> Best Hour 2014 : 21.00-22.00</b>";
+worstHour[21+5] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2014 : 01.00-02.00</b>";
 insight[21+6] = "Line 2013 vs 2014";
 contentInsight[21+6] = "While 2013 graph is declining from 01.00 to 04.00, the 2014 one is increasing."
+bestHour[21+6] = "<b>Best Hour 2013 : 20.00-21.00 <br> Best Hour 2014 : 21.00-22.00</b>";
+worstHour[21+6] = "<b>Worst Hour 2013 : 04.00-05.00 <br> Worst Hour 2014 : 01.00-02.00</b>";
 insight[21+7] = "Line 2012 vs 2013 vs 2014";
 contentInsight[21+7] = "LINE has a pretty same trend accross the batches. Increasing trend from morning to around 20.00 and then the regret comes."
-
-/* Combined Social Media Insight */
-var mediaInsight = [];
-mediaInsight[1] = "Angkatan 2012";
-mediaInsight[2] = "Angkatan 2013";
-mediaInsight[4] = "Angkatan 2014";
-mediaInsight[3] = "Angkatan 2012 vs 2013";
-mediaInsight[5] = "Angkatan 2012 vs 2014";
-mediaInsight[6] = "Angkatan 2013 vs 2014";
-mediaInsight[7] = "Angkatan 2012 vs 2013 vs 2014";
+bestHour[21+7] = "<b>Best Hour 2012 : 21.00-22.00 <br> Best Hour 2013 : 20.00-21.00 <br> Best Hour 2014 : 21.00-22.00</b>";
+worstHour[21+7] = "<b>Worst Hour 2012 : 04.00-05.00 <br> Worst Hour 2013 : 04.00-05.00 <br> Worst Hour 2014 : 01.00-02.00</b>";
 
 /* Shown insight code*/
 var insight_code = 1;
@@ -98,7 +146,8 @@ ins_s_code["instagram"] = 2;
 ins_s_code["line"] = 3;
 $(".selection-insight").text(insight[insight_code]);
 $(".content-insight").text(contentInsight[insight_code]);
-$(".content-insight-media").text(mediaInsight[(insight_code%7==0?7:insight_code%7)]);
+$(".content-best-hour").html(bestHour[insight_code]);
+$(".content-worst-hour").html(worstHour[insight_code]);
 var InsightLogo = [];
 InsightLogo["facebook"] = "images/logo-facebook.png";
 InsightLogo["twitter"] = "images/logo-twitter.png";
@@ -401,7 +450,8 @@ $(".batch-button").click(function(){
     }
 	$(".selection-insight").text(insight[insight_code]);
     $(".content-insight").text(contentInsight[insight_code]);
-	$(".content-insight-media").text(mediaInsight[(insight_code%7==0?7:insight_code%7)]);
+	$(".content-best-hour").html(bestHour[insight_code]);
+    $(".content-worst-hour").html(worstHour[insight_code]);
 })
 
 function whatSocialMedia($element){
