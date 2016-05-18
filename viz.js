@@ -75,6 +75,16 @@ contentInsight[21+6] = "While 2013 graph is declining from 01.00 to 04.00, the 2
 insight[21+7] = "Line 2012 vs 2013 vs 2014";
 contentInsight[21+7] = "LINE has a pretty same trend accross the batches. Increasing trend from morning to around 20.00 and then the regret comes."
 
+/* Combined Social Media Insight */
+var mediaInsight = [];
+mediaInsight[1] = "Angkatan 2012";
+mediaInsight[2] = "Angkatan 2013";
+mediaInsight[4] = "Angkatan 2014";
+mediaInsight[3] = "Angkatan 2012 vs 2013";
+mediaInsight[5] = "Angkatan 2012 vs 2014";
+mediaInsight[6] = "Angkatan 2013 vs 2014";
+mediaInsight[7] = "Angkatan 2012 vs 2013 vs 2014";
+
 /* Shown insight code*/
 var insight_code = 1;
 var ins_b_code = [];
@@ -88,6 +98,7 @@ ins_s_code["instagram"] = 2;
 ins_s_code["line"] = 3;
 $(".selection-insight").text(insight[insight_code]);
 $(".content-insight").text(contentInsight[insight_code]);
+$(".content-insight-media").text(mediaInsight[(insight_code%7==0?7:insight_code%7)]);
 var InsightLogo = [];
 InsightLogo["facebook"] = "images/logo-facebook.png";
 InsightLogo["twitter"] = "images/logo-twitter.png";
@@ -390,6 +401,7 @@ $(".batch-button").click(function(){
     }
 	$(".selection-insight").text(insight[insight_code]);
     $(".content-insight").text(contentInsight[insight_code]);
+	$(".content-insight-media").text(mediaInsight[(insight_code%7==0?7:insight_code%7)]);
 })
 
 function whatSocialMedia($element){
