@@ -561,17 +561,20 @@ function reChart(){
 }
 
 if($('.toggle-insight-graph').length){
-    $('.toogle-insight-graph').on("click", function(){
-        if($(this).hasClass('show-insight')){
+    $('.toggle-insight-graph').click();
+    $('.toggle-insight-graph').click();
+    $('.toggle-insight-graph').on("click", function(){
+        if($(this).hasClass('show-insight')){           
             $(this).removeClass('show-insight');
             $(this).addClass('show-graph');
-            $(this).attr("href", "#content");
-            $(this).find("button").text("See Insight");
+            $(this).attr("href", "#insight-container");
+            $(this).find("div").text("Back to Graph");
         } else {
             $(this).removeClass('show-graph');
             $(this).addClass('show-insight');
-            $(this).attr("href", "#insight-container");
-            $(this).find("button").text("Back to Graph");
+            $(this).attr("href", "#content");
+            $(this).find("div").text("See Insight");
+            
         }
-    })
+    });
 }
