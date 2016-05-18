@@ -99,7 +99,7 @@ MINVALUE = "00:00";
 MAXVALUE = "23:00";
 
 
-var w = 880;
+var w = 800;
 var h = 510;
 
 var margin = {
